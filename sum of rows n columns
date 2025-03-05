@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+  int r,c,i,j,sr=0,sc=0;
+  printf("enter the number of rows: ");
+  scanf("%d",&r);
+  printf("enter the number of columns: ");
+  scanf("%d",&c);
+  printf("enter the numbers: ");
+  int arr[r][c];
+  {
+   for(i=0;i<r;i++)
+   {
+     for(j=0;j<c;j++)
+     scanf("%d",&arr[i][j]);
+   }
+  }
+  {
+  for(i=0;i<r;i++)
+   {
+     for(j=0;j<c;j++)
+     sr=sr+arr[i][j];
+   }
+   printf("sum of rows is %d",sr);
+  }
+   {
+       for(i=0;i<r;i++)
+   {
+     for(j=0;j<c;j++)
+     sc=sc+arr[j][i];
+   }
+   printf("sum of columns is %d",sc);
+   }
+}
