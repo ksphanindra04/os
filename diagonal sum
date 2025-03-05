@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+  int r,c,i,j,s=0;
+  printf("enter the number of rows: ");
+  scanf("%d",&r);
+  printf("enter the number of columns: ");
+  scanf("%d",&c);
+  printf("enter the numbers: ");
+  int arr[r][c];
+  {
+   for(i=0;i<r;i++)
+   {
+     for(j=0;j<c;j++)
+     scanf("%d",&arr[i][j]);
+   }
+  }
+  if(r==c)
+  {
+   for(i=0;i<r;i++)
+   {
+     for(j=0;j<c;j++){
+        if(arr[i]==arr[j])
+        s=s+arr[i][j];
+     }
+   }
+   printf("the sum of diagnonal is %d",s);
+  }
+  else
+    return 0;
+}
